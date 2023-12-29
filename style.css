@@ -1,0 +1,259 @@
+:root{
+    --main:#002D64;
+    --span:#4295C5;
+    --back: #E4E4E4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+
+}
+body{
+    overflow-x: hidden;
+    font-family: NunitoSans;
+}
+span{
+    color: var(--span);
+}
+nav{
+    height: 4.1rem;
+    background-color: white;
+    width: 100%;
+    display: flex;
+    z-index: 999;
+    position: sticky;
+    position: -webkit-sticky;
+    font-family: NunitoSans;
+    top: 0;
+}
+
+.logo{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+}
+nav .navbar{
+    width:100%;
+    display: flex;
+    justify-content: space-around;
+}
+nav .menu{
+    width: 60%;
+    box-sizing: border-box;
+}
+nav .menu ul{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+}
+nav .menu ul li{
+    display: flex;
+    justify-content:space-between;
+    cursor: pointer;
+}
+
+.extra-menu{
+    width: 20%;
+    align-items: center;
+    color: black;
+    display: flex;
+    justify-content: space-around;
+}
+
+.extra-menu .login a{
+    text-decoration: none;
+    color: black;
+    background-color: var(--span);
+    border-radius: 10px;
+    padding:10px 30px;
+}
+/*Hero*/
+#hero{
+    width: 100vw;
+    display: flex;
+    justify-content:center;
+    height: 100vh;
+    background-color: white;
+}
+.hero{
+   height: 90vh;
+   width: 90vw;
+   display: flex;
+   border-radius: 23px;
+   align-items: center;
+   background-attachment: fixed;
+   background: linear-gradient(90deg, #dcdcdc 2%, #eee 100%);
+   overflow: hidden;
+}
+.hero .text{
+    border-radius: 23px;
+    padding-left: 7rem;
+    width: 600px;
+    position: relative;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    line-height: 50px;
+    z-index: 2;
+    background-color: var(--back);
+
+}
+.hero .text h2{
+    font-size: 50px;
+}
+
+.hero .text h5{
+    font-size: 30px;
+    opacity: .4;
+}
+.button{
+    margin-top: 50px;
+}
+.button a{
+    text-decoration: none;
+    color: black;
+    background-color: var(--span);
+    box-shadow: 1px 1px 7px #666666;
+    border-radius: 10px;
+    padding: 10px 20px;
+    transition: 1s;
+}
+.slider-container {
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+.slider{
+    display: flex;
+    width: 40vw;
+    align-items: center;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider img{
+    filter: drop-shadow(7px 7px 7px #666666);
+    width: 40vw;
+}
+
+.foto img{
+    filter: drop-shadow(7px 7px 7px #666666);
+    transition: 1s;
+    width: 100%;
+}
+
+.hero .foto img:hover{
+    transform: scale(1.1);
+    transition: 1s;
+}
+/*Kategori*/
+#kategori{
+    padding-top: 7rem;
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+}
+#kategori .container{
+    width: 90vw;
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+}
+.produk{
+    width: 400px;
+    height: 300px;
+    margin-top: 20px;
+    border-radius: 23px;
+    color: white;
+    display: flex;
+}
+.produk .text{
+    width: 50%;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+.produk h3{
+    align-items: center;
+    display: flex;
+    justify-content:center;
+    font-size: 30px;
+    text-align: center;
+}
+.produk .foto{
+    width: 50%;
+    position: relative;
+    top: -90px;
+    left: -80px;
+    z-index: 1;
+}
+.produk .foto img{
+    width: 150%;
+}
+#sandal .foto{
+    left: -100px;
+    top: 30px;
+}
+#sandal .foto img{
+    width: 150%;
+}
+#kaos{
+    background-color: #FEC62E;
+}
+#kemeja{
+    background-color: #222;
+}
+#sandal{
+    background-color: #F42C37;
+}
+#ganci{
+    color: black;
+    background-color: #EDECEE;
+}
+#ganci .foto {
+    top: -60px;
+}
+#ganci .foto img{
+    width:130%;
+}
+#kalung .foto img{
+    width:130%;
+}
+#kalung .foto {
+    top: 0px;
+}
+#gelang .foto img{
+    width:130%;
+}
+#gelang .foto {
+    top: 0px;
+    left: 0px;
+}
+#kalung{
+    background-color: #2DD06F;
+}
+#gelang{
+    background-color: #1687FF;
+}
+.produk .button{
+    transition: 1s;
+    transform: translateX(0) scale(1);
+    transition: transform .45s cubic-bezier(.75,.1,.25,.9);
+}
+.produk .button:hover{
+    transform: translate(20px) scale(1);
+}
+.produk .button a:hover{
+    background-color: var(--main);
+
+}
