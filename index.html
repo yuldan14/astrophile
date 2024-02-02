@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Astrophile</title>
+    <title>Astrophile | Beranda</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="img/astrophile.png" type="image/x-icon" />
     <style>
@@ -44,7 +44,6 @@
           <div class="button"><a href="#kategori">Beli Sekarang</a></div>
         </div>
         <div class="slide-container">
-          <button class="prev">&#10094;</button>
           <div class="slider">
             <div class="slide">
               <img src="img/Group 5.png" alt="" />
@@ -65,7 +64,6 @@
               <img src="img/gelang.png" alt="" />
             </div>
           </div>
-          <button class="next">&#10095;</button>
         </div>
       </div>
     </section>
@@ -145,8 +143,6 @@
       document.addEventListener('DOMContentLoaded', function () {
     const slider = document.querySelector('.slider');
     const slides = document.querySelectorAll('.slide');
-    const nextBtn = document.querySelector('.next');
-    const prevBtn = document.querySelector('.prev');
 
     let slideIndex = 0;
     let autoSlideInterval;
