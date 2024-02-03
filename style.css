@@ -9,6 +9,9 @@
   padding: 0;
   scroll-behavior: smooth;
 }
+p{
+  font-family: sans-serif;
+}
 body {
   overflow-x: hidden;
   font-family: NunitoSans;
@@ -140,6 +143,8 @@ nav .menu ul li {
 .slider img {
   filter: drop-shadow(7px 7px 7px #666666);
   width: 40vw;
+  position: relative;
+  top: 2rem;
 }
 
 .foto img {
@@ -259,7 +264,7 @@ nav .menu ul li {
 .container-login {
   display: flex;
   justify-content: space-around;
-  background: url(img/bg.jfif);
+  background: url();
   background-repeat: no-repeat;
   background-size: cover;
   width: 100vw;
@@ -268,68 +273,64 @@ nav .menu ul li {
 .left {
   width: 50vw;
   height: 100vh;
+  display: flex;
+  align-items: center;
 }
 .left .image {
-  background: url("https://img.freepik.com/free-vector/astronomy-concept-with-retro-science-cartoon-icons-set_1284-7503.jpg?w=740&t=st=1706856916~exp=1706857516~hmac=11a24b94eee9cec4b10e04b5feff8f5d0a339ee109c5035d282d453c65509f2b");
-  border-radius: 25% 59% 25% 59% / 0% 40% 0% 57%;
+    background: url("img/astro-login.png");
+  border-radius: 10px;
   width: 500px;
   height: 500px;
   left: 100px;
-  top: 4rem;
   position: relative;
+  background-repeat: no-repeat;
 }
 
 .right {
   width: 50vw;
   height: 100vh;
+  display: flex;
+  align-items: center;
 }
 .right form {
   position: relative;
   border-radius: 30px;
-  top: 10rem;
-  display: flex;
-  flex-direction: column;
-  height: 60vh;
-  width: 500px;
+  height: 80vh;
+  width: 32vw;
   left: 100px;
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(0, 0, 0, 0.178);
   -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
-.right form h1{
-    text-align: center;
-    position: relative;
-    top: 1rem;
+.right form h1 {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+.right form h1.astro{
+  margin-bottom: 5rem;
 }
 
-.right form .form{
-    top: 30px;
-    position: relative;
-    padding-left: 30px;
-}
-
-.right form .form .username, .right form .form .password{
-    margin-top: 2rem;
+.right form .form #form{
+  margin: .5rem 3rem;
 }
 
 .right form input {
-  width: 400px;
+  width: 22vw;
   border-radius: 10px;
   height: 2.4rem;
+  border:none;
 }
 .right form input[placeholder] {
   padding-left: 50px;
   box-sizing: border-box;
 }
-.right form .button{
-    justify-content: center;
-    display: flex;
+.right form .button {
+  justify-content: center;
+  display: flex;  
 }
 .right form button {
-    position: relative;
-    top: 19px;
-  width: 100px;
+  width: 8vw;
   border-radius: 12px;
   height: 2.4rem;
   border: none;
@@ -337,28 +338,41 @@ nav .menu ul li {
   font-weight: 700;
   background-color: var(--span);
   cursor: pointer;
+  margin-bottom: 1rem;
 }
 
-.right form .other{
-    position: relative;
-    top: 40px;
-    text-align: center;
-    font-weight: 100;
-    font-family:sans-serif;
+.right form .other {
+  margin-top: 2rem;
+  text-align: center;
+  color: #302929;
+  font-weight: 100;
+  font-family: sans-serif;
 }
-.right form .other .social{
-    top: 30px;
-    position: relative;
-    display: flex;
-    justify-content: space-evenly;
+.right form .other .social {
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: space-evenly;
 }
 .right form .other .social #social {
-    background-color: rgba(255, 255, 255, 0.822);
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.822);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
 
+.right form .registrasi{
+    font-family: sans-serif;
+    margin-left: 3rem;
+}
+
+.tanggal-lahir table select{
+  border-radius: 10px;
+  height: 5vh;
+  width: 5vw;
+  border: none;
+  margin-right: 1rem;
 }
