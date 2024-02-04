@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+
   <link rel="shortcut icon" href="img/astrophile.png" type="image/x-icon" />
   <script src="https://unpkg.com/feather-icons"></script>
   <style>
@@ -20,91 +22,88 @@
 
 <body>
   <div class="container-login">
-    <div class="left">
-      <div class="image"></div>
-    </div>
-
-    <div class="right">
-      <form action="index.php">
-        <h1>BUAT <span>AKUN</span></h1>
-        <div class="form">
-          <div class="email" id="form">
-            <label for="email">Email</label>
-            <input type="text" placeholder="Email" name="email" required>
-          </div>
-          <div class="notelepon" id="form">
-            <label for="phone">No Telepon</label>
-            <input id="phone" type="tel" name="phone" required />
-          </div>
-          <div class="user" id="form">
-            <label for="username">Username</label>
-            <input type="text" placeholder="Username" name="username" required />
-          </div>
-          <div class="password" id="form">
-            <label for="password">Password</label>
-            <input type="password" placeholder="Password" name="password" required />
-          </div>
-          <div class="tanggal-lahir" id="form">
-            <label for="">Tanggal Lahir</label>
-            <table>
-              <tr>
-                <td>
-                  <select name="tanggallahir">
-                    <?php
-                    for ($i = 1; $i <= 31; $i++) {
-                    ?>
-                      <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
-                    <?php
-                    }
-                    ?>
-                  </select>
-                </td>
-                <td>
-                  <select name="bulan">
-                    <?php
-                    for ($i = 1; $i <= 12; $i++) {
-                    ?>
-                      <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
-                    <?php
-                    }
-                    ?>
-                  </select>
-                </td>
-                <td>
-                  <select name="tahun">
-                    <?php
-                    for ($i = 1990; $i <= 2018; $i++) {
-                    ?>
-                      <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
-                    <?php
-                    }
-                    ?>
-                  </select>
-                </td>
-              </tr>
-
-            </table>
-          </div>
-
+    <form action="index.php">
+      <h1>BUAT <span>AKUN</span></h1>
+      <div class="form">
+        <div class="email" id="form">
+          <p><label for="email">Email</label></p>
+          <p><input type="text" placeholder="Email" name="email" required></p>
         </div>
-        <div class="button">
-          <button type="submit">SIGN UP</button>
+        <div class="notelepon" id="form">
+          <p><label for="phone">No Telepon</label></p>
+          <p> <input id="phone" type="tel" name="phone" required />
+          </p>
         </div>
-        <div class="registrasi">
-          <p>Sudah memiliki akun? <a href="login.php"> Masuk ke akun</a></p>
+        <div class="user" id="form">
+          <p><label for="username">Username</label></p>
+          <p><input type="text" placeholder="Username" name="username" required /></p>
         </div>
-      </form>
-    </div>
+        <div class="password" id="form">
+          <p><label for="password">Password</label></p>
+          <p><input type="password" placeholder="Password" name="password" id="password" required />
+          <i class="bi bi-eye-slash" id="togglePassword"></i></p>
+        </div>
+        <div class="tanggal-lahir" id="form">
+          <label for="">Tanggal Lahir</label>
+          <table>
+            <tr>
+              <td>
+                <select name="tanggallahir">
+                  <?php
+                  for ($i = 1; $i <= 31; $i++) {
+                  ?>
+                    <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+                  <?php
+                  }
+                  ?>
+                </select>
+              </td>
+              <td>
+                <select name="bulan">
+                  <?php
+                  for ($i = 1; $i <= 12; $i++) {
+                  ?>
+                    <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+                  <?php
+                  }
+                  ?>
+                </select>
+              </td>
+              <td>
+                <select name="tahun">
+                  <?php
+                  for ($i = 1990; $i <= 2018; $i++) {
+                  ?>
+                    <option value="<?php echo $i; ?>"><?php echo $i; ?></option>
+                  <?php
+                  }
+                  ?>
+                </select>
+              </td>
+            </tr>
 
-    <script>
-      feather.replace();
-    </script>
-    <script>
-      const phoneInputField = document.querySelector("#phone");
-      const phoneInput = window.intlTelInput(phoneInputField, {
-        utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
-      });
-    </script>
+          </table>
+        </div>
+
+      </div>
+      <div class="button">
+        <button type="submit">BUAT AKUN</button>
+      </div>
+      <div class="registrasi">
+        <p id="text">Sudah memiliki akun? <a href="login.php"> Masuk ke akun</a></p>
+      </div>
+    </form>
+  </div>
+  <script>
+    feather.replace();
+  </script>
+  <script>
+    const phoneInputField = document.querySelector("#phone");
+    const phoneInput = window.intlTelInput(phoneInputField, {
+      utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+    });
+  </script>
+  <script src="script.js"></script>
 </body>
 
 </html>
