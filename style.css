@@ -60,7 +60,10 @@ nav .menu ul li {
   justify-content: space-between;
   cursor: pointer;
 }
-
+nav .menu ul li a{
+  color: black;
+  text-decoration: none;
+}
 .extra-menu {
   width: 20%;
   align-items: center;
@@ -82,6 +85,7 @@ nav .menu ul li {
   display: flex;
   justify-content: center;
   height: 100vh;
+  font-family: NunitoSans;
   background-color: white;
 }
 .hero {
@@ -164,15 +168,16 @@ nav .menu ul li {
   display: flex;
   width: 100vw;
   justify-content: center;
+  font-family: NunitoSans;
 }
 #kategori .container {
-  width: 90vw;
+  width: 100vw;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 .produk {
-  width: 28vw;
+  width: 26vw;
   height: 35vh;
   margin-top: 20px;
   border-radius: 23px;
@@ -276,9 +281,9 @@ nav .menu ul li {
   border-radius: 30px;
   height: 80vh;
   width: 32vw;
-  background: rgba(0, 0, 0, 0.178);
-  -webkit-backdrop-filter: blur(12px);
-  backdrop-filter: blur(20px);
+  background: rgba(238, 231, 231, 0.13);
+  -webkit-backdrop-filter: blur(50px);
+  backdrop-filter: blur(50px);
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 .container-login form h1 {
@@ -354,10 +359,61 @@ nav .menu ul li {
   border: none;
   margin-right: 1rem;
 }
-form .password i {
+form .password i#togglePassword {
   position: relative;
+  cursor: pointer;
   left: -40px;
   top: -3px;
 }
 
+
+
+
+/* Cart */
+.cart-container{
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  font-family: NunitoSans;
+  margin: 1rem 0;
+  padding: 0 3rem;
+}
+
+.cart-left{
+  width: 45vw;
+}
+
+.cart-left .cart-head{
+  margin-bottom: 2rem;
+}
+.cart-left table{
+  max-height: 70vh;
+}
+.cart-left table tr th{
+  padding: .3rem;
+}
+
+.cart-right{
+  width: 30vw;
+}
+
+.cart-right .payment{
+  height: 80vh;
+  padding: 1rem 2rem;
+  background-color: #efefef;
+
+}
+
+.payment .checkout{
+  display: flex;
+  justify-content: center;
+}
+.payment .checkout button{
+  border-radius: 5px;
+  background-color: var(--span);
+  outline: none;
+  border: none;
+  margin-top: 5rem;
+  width: 20vw;
+}
 /* Responsif */
