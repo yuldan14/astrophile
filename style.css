@@ -10,11 +10,12 @@
   scroll-behavior: smooth;
 }
 p#text {
-  font-family: sans-serif;
+  font-family: 'Poppins';
 }
 body {
   overflow-x: hidden;
   font-family: NunitoSans;
+  width: 100vw;
 }
 span {
   color: var(--span);
@@ -60,6 +61,13 @@ nav .menu ul li {
   justify-content: space-between;
   cursor: pointer;
 }
+nav .menu form button{
+  border: 1px solid #002d64;
+  color: var(--main);
+}
+nav .menu form button:hover{
+  background-color: var(--main);
+}
 nav .menu ul li a{
   color: black;
   text-decoration: none;
@@ -70,7 +78,18 @@ nav .menu ul li a{
   color: black;
   display: flex;
   justify-content: space-around;
+  position: relative;
+  top: -10px;
 }
+.extra-menu .profil button{
+  background-color: white;
+  color: black;
+  border: none;
+}
+.extra-menu ul#dropdown{
+  margin-left: -4rem;
+}
+
 
 .extra-menu .login a {
   text-decoration: none;
@@ -120,7 +139,7 @@ nav .menu ul li a{
   font-size: 30px;
   opacity: 0.4;
 }
-.button {
+.hero .button {
   margin-top: 50px;
 }
 .button a {
@@ -165,10 +184,14 @@ nav .menu ul li a{
 /*Kategori*/
 #kategori {
   padding-top: 7rem;
-  display: flex;
   width: 100vw;
-  justify-content: center;
   font-family: NunitoSans;
+}
+
+#kategori .kategori-head{
+  width: 100vw;
+  margin-bottom: 5rem;
+  margin-left: 5rem;
 }
 #kategori .container {
   width: 100vw;
@@ -298,6 +321,17 @@ nav .menu ul li a{
   margin: 0.5rem 3rem;
 }
 
+.container-login form .form input#ingat{
+  width: 15px;
+  margin-right: 1rem;
+}
+.container-login form .form .ingat{
+  padding-left: 3.1rem;
+}
+.container-login form .form p#text{
+  display: flex;
+  align-items: center;
+}
 .container-login form input {
   width: 21vw;
   border-radius: 10px;
@@ -325,7 +359,7 @@ nav .menu ul li a{
 }
 
 .container-login form .other {
-  margin-top: 2rem;
+  margin-top: 1rem;
   text-align: center;
   color: #302929;
   font-weight: 100;
@@ -415,5 +449,25 @@ form .password i#togglePassword {
   border: none;
   margin-top: 5rem;
   width: 20vw;
+}
+
+
+
+/* footer */
+footer{
+  background-color: #efefef;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 12rem;
+  padding: 3rem 0;
+}
+
+footer a{
+  color: black;
+  text-decoration: none;
+}
+footer #foot h3{
+  margin-bottom: 3rem;
+  font-family: NunitoSans;
 }
 /* Responsif */

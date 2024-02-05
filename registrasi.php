@@ -9,7 +9,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
-
+  <!-- Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <link rel="shortcut icon" href="img/astrophile.png" type="image/x-icon" />
   <script src="https://unpkg.com/feather-icons"></script>
   <style>
@@ -41,7 +44,8 @@
         <div class="password" id="form">
           <p><label for="password">Password</label></p>
           <p><input type="password" placeholder="Password" name="password" id="password" required />
-          <i class="bi bi-eye-slash" id="togglePassword"></i></p>
+            <i class="bi bi-eye-slash" id="togglePassword"></i>
+          </p>
         </div>
         <div class="tanggal-lahir" id="form">
           <label for="">Tanggal Lahir</label>

@@ -5,6 +5,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Astrophile | Login</title>
+  <!-- Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
   <link rel="shortcut icon" href="img/astrophile.png" type="image/x-icon" />
@@ -30,6 +34,9 @@
           <label for="password"><i data-feather="lock"></i> </label>
           <input type="password" placeholder="Password" name="password" id="password" required />
           <i class="bi bi-eye-slash" id="togglePassword"></i>
+        </div>
+        <div class="ingat">
+        <p id="text"><input type="checkbox" name="ingat" id="ingat">Ingat Saya</p>
         </div>
       </div>
       <div class="button">
