@@ -81,17 +81,18 @@
             <div class="cart-table">
                 <table class="table table-striped">
                     <tr>
-                        <th width="90px"><input type="checkbox" name="cart-all" id="cart-all" onclick="checkAll(this)">Pilih Semua</th>
+                        <th width="90px"><input type="checkbox" name="cart-all" id="cart-all" onclick="checkAll(this)" onclick="updateTotal()">Pilih Semua</th>
                         <th colspan="2">Nama Produk</th>
                         <th>Ukuran</th>
                         <th width="200px">Jumlah</th>
                         <th>Total Harga</th>
                     </tr>
                     <tr>
-                        <td><input type="checkbox" name="cart" class="cart-checkbox" onclick="checkIfAllChecked()"></td>
+                        <td><input type="checkbox" name="cart" class="cart-checkbox" onclick="checkIfAllChecked()" onclick="updateTotal()"></td>
                         <td id="foto-barang">
                             <img src="img/Group 6.png" alt="">
-                        </td>                        <td>Kaos Astrophile</td>
+                        </td>
+                        <td>Kaos Astrophile</td>
                         <td>
                             <select name="size" id="size">
                                 <option value="S">Ukuran - S</option>
@@ -102,16 +103,17 @@
                         <td id="jumlah">
                             <!-- tombol jumlah -->
                             <button id="minus">−</button>
-                            <input type="number" value="0" id="input" readonly />
+                            <input type="number" value="0" id="input" readonly onchange="updateTotal()" />
                             <button id="plus">+</button>
                         </td>
-                        <td>120000</td>
+                        <td><input type="text" name="total-harga" id="total-harga" value="34000" readonly></td>
                     </tr>
                     <tr>
-                        <td><input type="checkbox" name="cart" class="cart-checkbox" onclick="checkIfAllChecked()"></td>
+                        <td><input type="checkbox" name="cart" class="cart-checkbox" onclick="checkIfAllChecked()" onclick="updateTotal()"></td>
                         <td id="foto-barang">
                             <img src="img/Group 6.png" alt="">
-                        </td>                        <td>Kaos Astrophile</td>
+                        </td>
+                        <td>Kaos Astrophile</td>
                         <td>
                             <select name="size" id="size">
                                 <option value="S">Ukuran - S</option>
@@ -122,16 +124,17 @@
                         <td id="jumlah">
                             <!-- tombol jumlah -->
                             <button id="minus">−</button>
-                            <input type="number" value="0" id="input" readonly />
+                            <input type="number" value="0" id="input" readonly onchange="updateTotal()" />
                             <button id="plus">+</button>
                         </td>
-                        <td>120000</td>
+                        <td><input type="text" name="total-harga" id="total-harga" value="34000" readonly></td>
                     </tr>
                     <tr>
-                        <td><input type="checkbox" name="cart" class="cart-checkbox" onclick="checkIfAllChecked()"></td>
+                        <td><input type="checkbox" name="cart" class="cart-checkbox" onclick="checkIfAllChecked()" onclick="updateTotal()"></td>
                         <td id="foto-barang">
                             <img src="img/Group 6.png" alt="">
-                        </td>                        <td>Kaos Astrophile</td>
+                        </td>
+                        <td>Kaos Astrophile</td>
                         <td>
                             <select name="size" id="size">
                                 <option value="S">Ukuran - S</option>
@@ -142,11 +145,12 @@
                         <td id="jumlah">
                             <!-- tombol jumlah -->
                             <button id="minus">−</button>
-                            <input type="number" value="0" id="input" readonly />
+                            <input type="number" value="0" id="input" readonly onchange="updateTotal()" />
                             <button id="plus">+</button>
                         </td>
-                        <td>120000</td>
+                        <td><input type="text" name="total-harga" id="total-harga" value="34000" readonly></td>
                     </tr>
+
                 </table>
             </div>
             <div class="cart-foot">
@@ -157,7 +161,12 @@
                 <div class="right-foot">
                     <div class="checkout">
                         <div class="jumlah-checkout">
-                            2 Item
+                            <div class="total-item">
+                                <input type="text" name="total-item" id="total-item" value="0"> Item
+                            </div>
+                            <div class="total-harga">
+                                Total Rp. <input type="text" name="total" id="total" value="0">
+                            </div>
                         </div>
                         <button class="btn btn-primary" type="submit"><a href="checkout.php">Checkout</a></button>
                     </div>
@@ -169,41 +178,101 @@
 
 
     <script>
-        const minusButton = document.getElementById('minus');
-        const plusButton = document.getElementById('plus');
-        const inputField = document.getElementById('input');
+        function updateTotal() {
+            var total = 0;
+            var totalItem = 0;
+            var rows = document.querySelectorAll('.cart-table tr:not(:first-child)');
 
-        minusButton.addEventListener('click', () => {
-            let value = parseInt(inputField.value);
-            if (value > 0) {
-                inputField.value = value - 1;
-            }
-        });
+            rows.forEach(function(row) {
+                var checkbox = row.querySelector('.cart-checkbox');
+                var input = row.querySelector('#input');
+                var harga = row.querySelector('#total-harga');
 
-        plusButton.addEventListener('click', () => {
-            let value = parseInt(inputField.value);
-            inputField.value = value + 1;
-        });
-
-
-        // Checkbox
-        function checkAll(source) {
-            var checkboxes = document.querySelectorAll('.cart-checkbox');
-            checkboxes.forEach(checkbox => {
-                checkbox.checked = source.checked;
+                if (checkbox.checked) {
+                    total += parseInt(input.value) * parseInt(harga.value);
+                    totalItem += parseInt(input.value);
+                }
             });
-        }
 
+            // document.getElementById('total').value = total;
+            // document.getElementById('total-item').value = totalItem;
+
+            // // Menonaktifkan tombol checkout jika total-item sama dengan 0
+            // document.querySelector('.btn-primary').disabled = totalItem === 0;
+        }
+        const minusButtons = document.querySelectorAll('#minus');
+        const plusButtons = document.querySelectorAll('#plus');
+        const inputs = document.querySelectorAll('#input');
+
+        minusButtons.forEach(function(button) {
+            button.addEventListener('click', function() {
+                var input = this.parentNode.querySelector('input[type=number]');
+                var value = parseInt(input.value);
+                if (value > 0) {
+                    input.value = value - 1;
+                    updateTotal();
+                }
+            });
+        });
+
+        plusButtons.forEach(function(button) {
+            button.addEventListener('click', function() {
+                var input = this.parentNode.querySelector('input[type=number]');
+                var value = parseInt(input.value);
+                input.value = value + 1;
+                updateTotal();
+            });
+        });
+
+        document.querySelectorAll('.cart-checkbox').forEach(function(checkbox) {
+            checkbox.addEventListener('change', function() {
+                updateTotal();
+                checkIfAllChecked();
+            });
+        });
+
+        // Fungsi untuk memeriksa apakah semua kotak centang telah dicentang atau tidak
         function checkIfAllChecked() {
             var checkboxes = document.querySelectorAll('.cart-checkbox');
             var selectAllCheckbox = document.getElementById('cart-all');
+            var totalItem = 0;
+
+            checkboxes.forEach(checkbox => {
+                if (checkbox.checked) {
+                    totalItem += parseInt(checkbox.parentNode.parentNode.querySelector('#input').value);
+                }
+            });
+
+            document.getElementById('total-item').value = totalItem;
+
+            // Periksa apakah semua kotak centang dicentang atau tidak
             var allChecked = true;
             checkboxes.forEach(checkbox => {
                 if (!checkbox.checked) {
                     allChecked = false;
                 }
             });
+
+            // Update nilai kotak centang 'Pilih Semua'
             selectAllCheckbox.checked = allChecked;
+            updateTotal();
+        }
+
+        // Fungsi untuk memeriksa atau membatalkan semua kotak centang saat kotak centang 'Pilih Semua' diperiksa atau dibatalkan
+        function checkAll(source) {
+            var checkboxes = document.querySelectorAll('.cart-checkbox');
+
+            checkboxes.forEach(checkbox => {
+                checkbox.checked = source.checked;
+            });
+
+            if (!source.checked) {
+                document.getElementById('total').value = 0;
+                document.getElementById('total-item').value = 0;
+            }
+
+            updateTotal();
+            checkIfAllChecked();
         }
     </script>
 

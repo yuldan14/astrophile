@@ -489,7 +489,7 @@ form .password i#togglePassword {
 .cart-left {
   width: 100vw;
 }
-.cart-left .cart-foot{
+.cart-left .cart-foot {
   display: flex;
   justify-content: space-between;
   position: fixed;
@@ -499,7 +499,7 @@ form .password i#togglePassword {
   background-color: white;
   padding: 10px 0;
 }
-.checkout a{
+.checkout a {
   color: #222;
   text-decoration: none;
 }
@@ -509,14 +509,31 @@ form .password i#togglePassword {
   display: flex;
   justify-content: center;
 }
+.cart-left .cart-table table tr {
+  text-align: center;
+}
 .cart-left .cart-table table {
   width: 90vw;
 }
-.cart-left tr td{
+.cart-left tr td {
   height: 10rem;
 }
-
-.cart-left td#foto-barang img{
+.cart-left .cart-table table td input#total-harga {
+  border: none;
+  text-align: center;
+  background: transparent;
+}
+.checkout .jumlah-checkout input#total {
+  position: relative;
+  border: none;
+}
+.checkout .jumlah-checkout input#total-item {
+  position: relative;
+  max-width: 40px;
+  text-align: center;
+  border: none;
+}
+.cart-left td#foto-barang img {
   height: 10rem;
 }
 
@@ -547,15 +564,13 @@ form .password i#togglePassword {
 .cart-left .cart-head {
   margin-bottom: 2rem;
 }
-.cart-left .cart-head h1{
+.cart-left .cart-head h1 {
   font-size: 1.4rem;
-
 }
-
 
 .cart-right {
   width: 30vw;
-  height:100vh;
+  height: 100vh;
   position: fixed;
   right: 0px;
 }
@@ -569,13 +584,13 @@ form .password i#togglePassword {
 .payment .checkout {
   display: flex;
   justify-content: center;
+  margin-top: 17rem;
 }
 .payment .checkout button {
   border-radius: 5px;
   background-color: var(--span);
   outline: none;
   border: none;
-  margin-top: 5rem;
   width: 20vw;
 }
 .cart-left .left-foot {
@@ -586,7 +601,7 @@ form .password i#togglePassword {
   text-decoration: none;
   color: var(--span);
 }
-.cart-left .left-foot:hover p#kembali{
+.cart-left .left-foot:hover p#kembali {
   animation: animasi_kembali 10s ease;
   position: relative;
 }
@@ -600,21 +615,16 @@ form .password i#togglePassword {
     left: -10px;
     transform: scale(1.2);
   }
-  100%{
+  100% {
     left: -10px;
     transform: scale(1.2);
   }
 }
 
-
-.right-foot .checkout{
+.right-foot .checkout {
   display: flex;
   gap: 2rem;
   align-items: center;
-}
-.right-foot .checkout .jumlah-checkout{
-  display: flex;
-  align-items: center; 
 }
 
 /* footer */
@@ -645,51 +655,49 @@ footer #foot h3 {
   background-repeat: none;
 }
 
-
-
 /* Informasi Pembayaran */
-.checkout-page{
+.checkout-page {
   width: 60vw;
 }
-.checkout-page .alamat{
+.checkout-page .alamat {
   color: black;
   font-family: "Poppins";
   margin-top: 1rem;
   display: flex;
   justify-content: space-between;
-  align-items:center;
+  align-items: center;
 }
-.checkout-page .alamat a{
+.checkout-page .alamat a {
   text-decoration: none;
   color: black;
   width: 100%;
 }
-.alamat .info-alamat{
+.alamat .info-alamat {
   min-width: 97%;
 }
-.checkout-page ul{
+.checkout-page ul {
   list-style-type: none;
 }
-.checkout-page .info-pembelian{
+.checkout-page .info-pembelian {
   margin-top: 2rem;
   display: flex;
   background-color: #ebebeb;
   height: 10rem;
 }
-.checkout-page .info-pembelian  .harga-dan-jumlah{
+.checkout-page .info-pembelian .harga-dan-jumlah {
   display: flex;
   justify-content: space-between;
 }
-.checkout-page .info-pembelian .foto-barang{
-  height: 10rem ;
+.checkout-page .info-pembelian .foto-barang {
+  height: 10rem;
   display: flex;
   justify-content: center;
   width: 20%;
 }
-.checkout-page .info-pembelian .foto-barang img{
-  height: 10rem ;  
+.checkout-page .info-pembelian .foto-barang img {
+  height: 10rem;
 }
-.checkout-page .info-pembelian .keterangan-barang{
+.checkout-page .info-pembelian .keterangan-barang {
   width: 80%;
   line-height: 3rem;
   padding: 0 3rem;

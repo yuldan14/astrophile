@@ -139,42 +139,55 @@
 
 
     <script>
-        const minusButton = document.getElementById('minus');
-        const plusButton = document.getElementById('plus');
-        const inputField = document.getElementById('input');
+        function updateTotal() {
+            var total = 0;
+            var totalItem = 0;
+            var rows = document.querySelectorAll('.cart-table tr:not(:first-child)');
 
-        minusButton.addEventListener('click', () => {
-            let value = parseInt(inputField.value);
-            if (value > 0) {
-                inputField.value = value - 1;
-            }
-        });
+            rows.forEach(function(row) {
+                var checkbox = row.querySelector('.cart-checkbox');
+                var input = row.querySelector('#input');
+                var harga = row.querySelector('#total-harga');
 
-        plusButton.addEventListener('click', () => {
-            let value = parseInt(inputField.value);
-            inputField.value = value + 1;
-        });
-
-
-        // Checkbox
-        function checkAll(source) {
-            var checkboxes = document.querySelectorAll('.cart-checkbox');
-            checkboxes.forEach(checkbox => {
-                checkbox.checked = source.checked;
-            });
-        }
-
-        function checkIfAllChecked() {
-            var checkboxes = document.querySelectorAll('.cart-checkbox');
-            var selectAllCheckbox = document.getElementById('cart-all');
-            var allChecked = true;
-            checkboxes.forEach(checkbox => {
-                if (!checkbox.checked) {
-                    allChecked = false;
+                if (checkbox.checked) {
+                    total += parseInt(input.value) * parseInt(harga.value);
+                    totalItem += parseInt(input.value);
                 }
             });
-            selectAllCheckbox.checked = allChecked;
+
+            document.getElementById('total').value = total;
+            document.getElementById('total-item').value = totalItem;
         }
+
+        const minusButtons = document.querySelectorAll('#minus');
+        const plusButtons = document.querySelectorAll('#plus');
+        const inputs = document.querySelectorAll('#input');
+
+        minusButtons.forEach(function(button) {
+            button.addEventListener('click', function() {
+                var input = this.parentNode.querySelector('input[type=number]');
+                var value = parseInt(input.value);
+                if (value > 0) {
+                    input.value = value - 1;
+                    updateTotal();
+                }
+            });
+        });
+
+        plusButtons.forEach(function(button) {
+            button.addEventListener('click', function() {
+                var input = this.parentNode.querySelector('input[type=number]');
+                var value = parseInt(input.value);
+                input.value = value + 1;
+                updateTotal();
+            });
+        });
+
+        document.querySelectorAll('.cart-checkbox').forEach(function(checkbox) {
+            checkbox.addEventListener('change', updateTotal);
+        });
+
+        
     </script>
 
     <!-- bootstrap -->
