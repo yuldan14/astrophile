@@ -71,97 +71,67 @@
             </div>
         </div>
     </nav>
-    <!-- cart -->
+
+    <!-- Checkout -->
     <div class="cart-container">
-        <!-- Kiri -->
-        <div class="cart-left">
-            <div class="cart-head">
-                <h1>KERANJANG BELANJA</h1>
+        <!-- Informasi Pembayaran -->
+        <div class="checkout-page">
+            <div class="checkout-head">
+                <h2>INFORMASI PEMBAYARAN</h2>
             </div>
-            <div class="cart-table">
-                <table class="table table-striped">
-                    <tr>
-                        <th width="90px"><input type="checkbox" name="cart-all" id="cart-all" onclick="checkAll(this)">Pilih Semua</th>
-                        <th colspan="2">Nama Produk</th>
-                        <th>Ukuran</th>
-                        <th width="200px">Jumlah</th>
-                        <th>Total Harga</th>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox" name="cart" class="cart-checkbox" onclick="checkIfAllChecked()"></td>
-                        <td id="foto-barang">
-                            <img src="img/Group 6.png" alt="">
-                        </td>                        <td>Kaos Astrophile</td>
-                        <td>
-                            <select name="size" id="size">
-                                <option value="S">Ukuran - S</option>
-                                <option value="M">Ukurna - M</option>
-                                <option value="L">Ukuran - L</option>
-                            </select>
-                        </td>
-                        <td id="jumlah">
-                            <!-- tombol jumlah -->
-                            <button id="minus">−</button>
-                            <input type="number" value="0" id="input" readonly />
-                            <button id="plus">+</button>
-                        </td>
-                        <td>120000</td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox" name="cart" class="cart-checkbox" onclick="checkIfAllChecked()"></td>
-                        <td id="foto-barang">
-                            <img src="img/Group 6.png" alt="">
-                        </td>                        <td>Kaos Astrophile</td>
-                        <td>
-                            <select name="size" id="size">
-                                <option value="S">Ukuran - S</option>
-                                <option value="M">Ukurna - M</option>
-                                <option value="L">Ukuran - L</option>
-                            </select>
-                        </td>
-                        <td id="jumlah">
-                            <!-- tombol jumlah -->
-                            <button id="minus">−</button>
-                            <input type="number" value="0" id="input" readonly />
-                            <button id="plus">+</button>
-                        </td>
-                        <td>120000</td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox" name="cart" class="cart-checkbox" onclick="checkIfAllChecked()"></td>
-                        <td id="foto-barang">
-                            <img src="img/Group 6.png" alt="">
-                        </td>                        <td>Kaos Astrophile</td>
-                        <td>
-                            <select name="size" id="size">
-                                <option value="S">Ukuran - S</option>
-                                <option value="M">Ukurna - M</option>
-                                <option value="L">Ukuran - L</option>
-                            </select>
-                        </td>
-                        <td id="jumlah">
-                            <!-- tombol jumlah -->
-                            <button id="minus">−</button>
-                            <input type="number" value="0" id="input" readonly />
-                            <button id="plus">+</button>
-                        </td>
-                        <td>120000</td>
-                    </tr>
-                </table>
-            </div>
-            <div class="cart-foot">
-                <div class="left-foot">
-                    <div id="kembali"><a href="product.php"><i data-feather="arrow-left"></i></a></div>
-                    <div><a href="product.php">Kembali</a></div>
+            <!-- Alamat -->
+            <div class="alamat">
+                <div class="info-alamat">
+                    <a id="alamat" href="cart.php">
+                        Alamat Pengiriman
+                        <br>
+                        Yuldan Nur Addinsyah | (+62)857-0179-6316 <br>Jalan Sufyan Tsauri, Majenang, Cilacap
+                    </a>
                 </div>
-                <div class="right-foot">
-                    <div class="checkout">
-                        <div class="jumlah-checkout">
-                            2 Item
+                <div class="arrow-kanan">
+                    <a href="cart.php">
+                        <i data-feather="arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- Info-pembelian -->
+            <ul>
+                <li>
+                    <div class="info-pembelian">
+                        <div class="foto-barang">
+                            <img src="img/Group 6.png" alt="">
                         </div>
-                        <button class="btn btn-primary" type="submit"><a href="checkout.php">Checkout</a></button>
+                        <div class="keterangan-barang">
+                            <div class="nama-barang">Kaos Astrophile</div>
+                            <div class="variasi">Variasi : L</div>
+                            <div class="harga-dan-jumlah">
+                                <div class="harga-checkout">
+                                    Rp. 34.000
+                                </div>
+                                <div class="jumlah">
+                                    x 2
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                </li>
+            </ul>
+        </div>
+        <!-- kanan -->
+        <div class="cart-right">
+            <div class="payment">
+                <div class="payment-head">
+                    <h3>METODE PEMBAYARAN</h3>
                 </div>
+                <div class="payment-method">
+                    <p><input type="radio" name="payment" id="payment" value="creditcard"> Kartu Kredit</p>
+                    <p><input type="radio" name="payment" id="payment" value="dana"> DANA</p>
+                    <p><input type="radio" name="payment" id="payment" value="shoppe"> Shoppe</p>
+                </div>
+                <div class="checkout">
+                    <button class="btn btn-primary" type="submit">Checkout</button>
+                </div>
+
             </div>
         </div>
     </div>

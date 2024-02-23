@@ -29,7 +29,7 @@
     <div class="navbar">
       <div class="menu">
         <ul>
-          <li><a href="index.php">BERANDA</a></li>
+          <li><a href="index.php" style="color:#002d64;">BERANDA</a></li>
           <li><a href="product.php">PRODUK</a></li>
           <form class="d-flex" role="search">
             <input class="form-control me-2" type="search" placeholder="Cari" aria-label="Search">
@@ -86,7 +86,7 @@
   </section>
   <section id="kategori">
     <div class="kategori-head">
-      <h1>KATEGORI</h1>
+      <h2>KATEGORI</h2>
     </div>
     <div class="container">
       <div class="produk" id="kaos">
@@ -154,6 +154,49 @@
         <div class="foto">
           <img src="img/gelang.png" alt="" />
         </div>
+      </div>
+    </div>
+  </section>
+  <section id="latest">
+    <div class="latest-head">
+      <h2>PRODUK TERBARU</h2>
+      <p><a href="product.php">Lihat Semua Produk  <i data-feather="arrow-right"></i> </a></p>
+    </div>
+    <div class="produk-container">
+      <div class="product">
+        <div class="foto-produk-terbaru">
+          <img src="img/kemeja.png" alt="">
+        </div>
+        <div class="rating"><i data-feather="star"></i>5.0</div>
+        <div class="nama">Kaos Astrophile</div>
+        <div class="harga">Rp 123,000</div>
+        <div class="beli">
+          <a href="info-produk.php">INFO</a>
+        </div>
+      </div>
+      <div class="product">
+        <div class="foto-produk-terbaru">
+          <img src="img/kemeja.png" alt="">
+        </div>
+        <div class="rating"><i data-feather="star"></i>5.0</div>
+        <div class="nama">Kaos Astrophile</div>
+        <div class="harga">Rp 123,000</div>
+      </div>
+      <div class="product">
+        <div class="foto-produk-terbaru">
+          <img src="img/kemeja.png" alt="">
+        </div>
+        <div class="rating"><i data-feather="star"></i>5.0</div>
+        <div class="nama">Kaos Astrophile</div>
+        <div class="harga">Rp 123,000</div>
+      </div>
+      <div class="product">
+        <div class="foto-produk-terbaru">
+          <img src="img/kemeja.png" alt="">
+        </div>
+        <div class="rating"><i data-feather="star"></i>5.0</div>
+        <div class="nama">Kaos Astrophile</div>
+        <div class="harga">Rp 123,000</div>
       </div>
     </div>
   </section>

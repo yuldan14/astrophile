@@ -10,7 +10,7 @@
   scroll-behavior: smooth;
 }
 p#text {
-  font-family: 'Poppins';
+  font-family: "Poppins";
 }
 body {
   overflow-x: hidden;
@@ -61,35 +61,38 @@ nav .menu ul li {
   justify-content: space-between;
   cursor: pointer;
 }
-nav .menu form button{
+nav .menu form button {
   border: 1px solid #002d64;
   color: var(--main);
 }
-nav .menu form button:hover{
+nav .menu form button:hover {
   background-color: var(--main);
 }
-nav .menu ul li a{
+nav .menu ul li a {
   color: black;
   text-decoration: none;
+}
+nav .menu ul li a:hover {
+  color: var(--main);
 }
 .extra-menu {
   width: 20%;
   align-items: center;
   color: black;
   display: flex;
-  justify-content: space-around;
+  gap: 2rem;
+  justify-content: center;
   position: relative;
   top: -10px;
 }
-.extra-menu .profil button{
+.extra-menu .profil button {
   background-color: white;
   color: black;
   border: none;
 }
-.extra-menu ul#dropdown{
+.extra-menu ul#dropdown {
   margin-left: -4rem;
 }
-
 
 .extra-menu .login a {
   text-decoration: none;
@@ -152,6 +155,9 @@ nav .menu ul li a{
   transition: 1s;
   font-size: 1rem;
 }
+.hero .button a:hover {
+  background-color: var(--main);
+}
 .slider-container {
   width: 100%;
   margin: auto;
@@ -188,7 +194,7 @@ nav .menu ul li a{
   font-family: NunitoSans;
 }
 
-#kategori .kategori-head{
+#kategori .kategori-head {
   width: 100vw;
   margin-bottom: 5rem;
   margin-left: 5rem;
@@ -288,6 +294,76 @@ nav .menu ul li a{
   background-color: var(--main);
 }
 
+/* Produk terbaru */
+#latest {
+  width: 100vw;
+  margin-top: 10rem;
+}
+#latest .latest-head {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5rem;
+  width: 100vw;
+  margin-bottom: 2rem;
+}
+#latest .latest-head h2 {
+  font-family: NunitoSans;
+}
+#latest .latest-head p a {
+  color: var(--span);
+  text-decoration: none;
+}
+
+#latest .produk-container {
+  width: 100vw;
+  padding: 0 5rem;
+  display: flex;
+}
+
+#latest .produk-container .product {
+  box-shadow: 0px 0px 2px 1px;
+  margin: 0 1rem;
+  border-radius: 5px;
+  width: 20vw;
+  height: 60vh;
+  cursor: pointer;
+}
+
+#latest .produk-container .product .beli a {
+  text-decoration: none;
+  color: black;
+  background-color: var(--main);
+  padding: 1rem 2rem;
+  position: relative;
+  border-radius: 2px;
+}
+#latest .produk-container .product .beli {
+  position: relative;
+  z-index: 3;
+  opacity: 0;
+  transition: 0.5s;
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+}
+#latest .produk-container .product .foto-produk-terbaru {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0 3rem 0;
+}
+#latest .produk-container .product .foto-produk-terbaru img {
+  width: 50%;
+}
+#latest .produk-container .product .rating,
+.nama,
+.harga {
+  margin-left: 1rem;
+}
+
 /* Halaman Login */
 .container-login {
   display: flex;
@@ -321,14 +397,14 @@ nav .menu ul li a{
   margin: 0.5rem 3rem;
 }
 
-.container-login form .form input#ingat{
+.container-login form .form input#ingat {
   width: 15px;
   margin-right: 1rem;
 }
-.container-login form .form .ingat{
+.container-login form .form .ingat {
   padding-left: 3.1rem;
 }
-.container-login form .form p#text{
+.container-login form .form p#text {
   display: flex;
   align-items: center;
 }
@@ -400,49 +476,101 @@ form .password i#togglePassword {
   top: -3px;
 }
 
-
-
-
 /* Cart */
-.cart-container{
+.cart-container {
   width: 100vw;
   display: flex;
   justify-content: space-between;
   font-family: NunitoSans;
   margin: 1rem 0;
-  padding: 0 3rem;
+  padding-left: 3rem;
 }
 
-.cart-left{
-  width: 45vw;
+.cart-left {
+  width: 100vw;
 }
-
-.cart-left .cart-head{
-  margin-bottom: 2rem;
+.cart-left .cart-foot{
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 3;
+  bottom: 0;
+  width: 90vw;
+  background-color: white;
+  padding: 10px 0;
 }
-.cart-left table{
-  max-height: 70vh;
+.checkout a{
+  color: #222;
+  text-decoration: none;
 }
-.cart-left table tr th{
-  padding: .3rem;
-}
-
-.cart-right{
-  width: 30vw;
-}
-
-.cart-right .payment{
-  height: 80vh;
-  padding: 1rem 2rem;
-  background-color: #efefef;
-
-}
-
-.payment .checkout{
+.cart-left .cart-table {
+  width: 90vw;
+  margin-bottom: 5rem;
   display: flex;
   justify-content: center;
 }
-.payment .checkout button{
+.cart-left .cart-table table {
+  width: 90vw;
+}
+.cart-left tr td{
+  height: 10rem;
+}
+
+.cart-left td#foto-barang img{
+  height: 10rem;
+}
+
+.cart-left tr:nth-child(1) {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+.cart-left tr:nth-child(1) th p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cart-container .cart-left td td#jumlah {
+  display: flex;
+}
+.cart-container .cart-left tr td button {
+  width: 40px;
+  border: none;
+  background-color: #717575;
+}
+.cart-container .cart-left tr td#jumlah input {
+  width: 40px;
+  border: none;
+  text-align: center;
+}
+
+.cart-left .cart-head {
+  margin-bottom: 2rem;
+}
+.cart-left .cart-head h1{
+  font-size: 1.4rem;
+
+}
+
+
+.cart-right {
+  width: 30vw;
+  height:100vh;
+  position: fixed;
+  right: 0px;
+}
+
+.cart-right .payment {
+  height: 100vh;
+  padding: 3rem 1rem;
+  background-color: #efefef;
+}
+
+.payment .checkout {
+  display: flex;
+  justify-content: center;
+}
+.payment .checkout button {
   border-radius: 5px;
   background-color: var(--span);
   outline: none;
@@ -450,11 +578,47 @@ form .password i#togglePassword {
   margin-top: 5rem;
   width: 20vw;
 }
+.cart-left .left-foot {
+  display: flex;
+  align-items: center;
+}
+.cart-left .left-foot a {
+  text-decoration: none;
+  color: var(--span);
+}
+.cart-left .left-foot:hover p#kembali{
+  animation: animasi_kembali 10s ease;
+  position: relative;
+}
+
+@keyframes animasi_kembali {
+  0% {
+    left: 0;
+    transform: scale(1);
+  }
+  10% {
+    left: -10px;
+    transform: scale(1.2);
+  }
+  100%{
+    left: -10px;
+    transform: scale(1.2);
+  }
+}
 
 
+.right-foot .checkout{
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+.right-foot .checkout .jumlah-checkout{
+  display: flex;
+  align-items: center; 
+}
 
 /* footer */
-footer{
+footer {
   background-color: #efefef;
   display: flex;
   justify-content: space-around;
@@ -462,12 +626,72 @@ footer{
   padding: 3rem 0;
 }
 
-footer a{
+footer a {
   color: black;
   text-decoration: none;
 }
-footer #foot h3{
+footer #foot h3 {
   margin-bottom: 3rem;
   font-family: NunitoSans;
+}
+
+/* Produk page */
+.hero-product {
+  width: 100vw;
+  height: 20rem;
+  background-position-y: 100px;
+  background: url("https://img.freepik.com/free-psd/flat-design-fashion-template_23-2150070756.jpg?w=900&t=st=1707193233~exp=1707193833~hmac=732e9c501d439bc0213298a79015059baa70d0fcac6055e71c847cadfa25d47d");
+  background-size: cover;
+  background-repeat: none;
+}
+
+
+
+/* Informasi Pembayaran */
+.checkout-page{
+  width: 60vw;
+}
+.checkout-page .alamat{
+  color: black;
+  font-family: "Poppins";
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+}
+.checkout-page .alamat a{
+  text-decoration: none;
+  color: black;
+  width: 100%;
+}
+.alamat .info-alamat{
+  min-width: 97%;
+}
+.checkout-page ul{
+  list-style-type: none;
+}
+.checkout-page .info-pembelian{
+  margin-top: 2rem;
+  display: flex;
+  background-color: #ebebeb;
+  height: 10rem;
+}
+.checkout-page .info-pembelian  .harga-dan-jumlah{
+  display: flex;
+  justify-content: space-between;
+}
+.checkout-page .info-pembelian .foto-barang{
+  height: 10rem ;
+  display: flex;
+  justify-content: center;
+  width: 20%;
+}
+.checkout-page .info-pembelian .foto-barang img{
+  height: 10rem ;  
+}
+.checkout-page .info-pembelian .keterangan-barang{
+  width: 80%;
+  line-height: 3rem;
+  padding: 0 3rem;
 }
 /* Responsif */
