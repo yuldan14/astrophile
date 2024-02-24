@@ -116,6 +116,15 @@
                     </div>
                 </li>
             </ul>
+            <div class="voucher-pesan">
+                <div class="voucher">
+                    <p id="text">Masukkan Kode Voucher: <input type="text" name="voucher" id="voucher"></p>
+                </div>
+                <div class="pesan">
+                    <p id="text">Pesan: <input type="text" name="pesan" id="voucher"></p>
+
+                </div>
+            </div>
             <div class="rincian-pembayaran">
                 <i data-feather="dollar-sign"></i>Rincian Pembayaran
                 <div class="rincian">

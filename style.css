@@ -31,7 +31,9 @@ nav {
   font-family: NunitoSans;
   top: 0;
 }
-
+input:focus{
+  outline: none;
+}
 .logo {
   position: relative;
   display: flex;
@@ -521,14 +523,20 @@ form .password i#togglePassword {
   border: none;
   text-align: center;
   background: transparent;
+  cursor: default;
+}
+.checkout .jumlah-checkout{
+  cursor: default;
 }
 .checkout .jumlah-checkout input#total {
   position: relative;
+  cursor:default;
   border: none;
 }
 .checkout .jumlah-checkout input#total-item {
   position: relative;
   max-width: 40px;
+  cursor: default;
   text-align: center;
   border: none;
 }
@@ -743,5 +751,17 @@ footer #foot h3 {
 .rincian-pembayaran .rincian input{
   border: none;
   cursor: default;
+}
+.voucher-pesan{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+.voucher-pesan input{
+  border: none;
+  border-bottom: 1px solid black;
+}
+.voucher-pesan input:focus{
+  outline: none;
 }
 /* Responsif */

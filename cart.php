@@ -162,10 +162,10 @@
                     <div class="checkout">
                         <div class="jumlah-checkout">
                             <div class="total-item">
-                                <input type="text" name="total-item" id="total-item" value="0"> Item
+                                <input type="text" name="total-item" id="total-item" value="0"readonly> Item
                             </div>
                             <div class="total-harga">
-                                Total Rp. <input type="text" name="total" id="total" value="0">
+                                Total Rp. <input type="text" name="total" id="total" value="0" readonly>
                             </div>
                         </div>
                         <button class="btn btn-primary" type="submit">Checkout</button>
