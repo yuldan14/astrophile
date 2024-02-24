@@ -178,7 +178,7 @@
 
 
     <script>
-        function updateTotal() {
+       function updateTotal() {
             var total = 0;
             var totalItem = 0;
             var rows = document.querySelectorAll('.cart-table tr:not(:first-child)');
@@ -194,12 +194,10 @@
                 }
             });
 
-            // document.getElementById('total').value = total;
-            // document.getElementById('total-item').value = totalItem;
-
-            // // Menonaktifkan tombol checkout jika total-item sama dengan 0
-            // document.querySelector('.btn-primary').disabled = totalItem === 0;
+            document.getElementById('total').value = total;
+            document.getElementById('total-item').value = totalItem;
         }
+
         const minusButtons = document.querySelectorAll('#minus');
         const plusButtons = document.querySelectorAll('#plus');
         const inputs = document.querySelectorAll('#input');
@@ -274,6 +272,18 @@
             updateTotal();
             checkIfAllChecked();
         }
+        // Validasi saat tombol checkout ditekan
+        document.querySelector('.btn-primary').addEventListener('click', function() {
+            var totalItem = parseInt(document.getElementById('total-item').value);
+            if (totalItem === 0) {
+                alert('Pilih item terlebih dahulu.');
+                a.href= "cart.php";
+                // Atau gunakan popup lain seperti modal Bootstrap
+            } else {
+                // Lakukan checkout
+                window.location.href = "checkout.php";
+            }
+        });
     </script>
 
     <!-- bootstrap -->
