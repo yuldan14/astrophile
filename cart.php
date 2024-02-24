@@ -168,7 +168,10 @@
                                 Total Rp. <input type="text" name="total" id="total" value="0">
                             </div>
                         </div>
-                        <button class="btn btn-primary" type="submit"><a href="checkout.php">Checkout</a></button>
+                        <button class="btn btn-primary" type="submit">Checkout</button>
+                        <div class="popup">
+                            <p>Anda belum memilih produk apapun</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -178,7 +181,7 @@
 
 
     <script>
-       function updateTotal() {
+        function updateTotal() {
             var total = 0;
             var totalItem = 0;
             var rows = document.querySelectorAll('.cart-table tr:not(:first-child)');
@@ -275,9 +278,15 @@
         // Validasi saat tombol checkout ditekan
         document.querySelector('.btn-primary').addEventListener('click', function() {
             var totalItem = parseInt(document.getElementById('total-item').value);
+            var popup = document.querySelector(".popup")
             if (totalItem === 0) {
-                alert('Pilih item terlebih dahulu.');
-                a.href= "cart.php";
+                popup.style.display = "block";
+                setTimeout(function() {
+                    popup.style.display = "none";
+                    setTimeout(function(){
+                        popup.classList.add('fadeOut');
+                    }, 3000);
+                }, 3000);
                 // Atau gunakan popup lain seperti modal Bootstrap
             } else {
                 // Lakukan checkout

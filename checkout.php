@@ -116,6 +116,28 @@
                     </div>
                 </li>
             </ul>
+            <div class="rincian-pembayaran">
+                <i data-feather="dollar-sign"></i>Rincian Pembayaran
+                <div class="rincian">
+                    <!-- kiri -->
+                    <div class="kiri">
+                        <p id="text">Subtotal untuk Produk</p>
+                        <p id="text">Subtotal Pengiriman</p>
+                        <p id="text">Total Diskon Pengiriman</p>
+                        <p id="text">Biaya Layanan</p>
+                        <p id="text">Biaya Pengiriman</p>
+                        <p id="text">Total Pembayaran</p>
+                    </div>
+                    <div class="kanan">
+                        <p id="text">Rp. <input type="text" value="30000" readonly> </p>
+                        <p id="text">Rp. <input type="text" value="30000" readonly> </p>
+                        <p id="text">Rp. <input type="text" value="30000" readonly> </p>
+                        <p id="text">Rp. <input type="text" value="30000" readonly> </p>
+                        <p id="text">Rp. <input type="text" value="30000" readonly> </p>
+                        <p id="text">Rp. <input type="text" value="30000" readonly> </p>
+                    </div>
+                </div>
+            </div>
         </div>
         <!-- kanan -->
         <div class="cart-right">
@@ -139,55 +161,7 @@
 
 
     <script>
-        function updateTotal() {
-            var total = 0;
-            var totalItem = 0;
-            var rows = document.querySelectorAll('.cart-table tr:not(:first-child)');
 
-            rows.forEach(function(row) {
-                var checkbox = row.querySelector('.cart-checkbox');
-                var input = row.querySelector('#input');
-                var harga = row.querySelector('#total-harga');
-
-                if (checkbox.checked) {
-                    total += parseInt(input.value) * parseInt(harga.value);
-                    totalItem += parseInt(input.value);
-                }
-            });
-
-            document.getElementById('total').value = total;
-            document.getElementById('total-item').value = totalItem;
-        }
-
-        const minusButtons = document.querySelectorAll('#minus');
-        const plusButtons = document.querySelectorAll('#plus');
-        const inputs = document.querySelectorAll('#input');
-
-        minusButtons.forEach(function(button) {
-            button.addEventListener('click', function() {
-                var input = this.parentNode.querySelector('input[type=number]');
-                var value = parseInt(input.value);
-                if (value > 0) {
-                    input.value = value - 1;
-                    updateTotal();
-                }
-            });
-        });
-
-        plusButtons.forEach(function(button) {
-            button.addEventListener('click', function() {
-                var input = this.parentNode.querySelector('input[type=number]');
-                var value = parseInt(input.value);
-                input.value = value + 1;
-                updateTotal();
-            });
-        });
-
-        document.querySelectorAll('.cart-checkbox').forEach(function(checkbox) {
-            checkbox.addEventListener('change', updateTotal);
-        });
-
-        
     </script>
 
     <!-- bootstrap -->

@@ -482,7 +482,6 @@ form .password i#togglePassword {
   display: flex;
   justify-content: space-between;
   font-family: NunitoSans;
-  margin: 1rem 0;
   padding-left: 3rem;
 }
 
@@ -532,6 +531,31 @@ form .password i#togglePassword {
   max-width: 40px;
   text-align: center;
   border: none;
+}
+.right-foot .checkout .popup{
+  position: absolute;
+  top: -450%;
+  left: 25%;
+  display: none;
+  background: rgba(0, 0, 0, 0.534);
+  -webkit-backdrop-filter: blur(50px);
+  backdrop-filter: blur(10px);
+  color: white;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 50vw;
+  text-align: center;
+  line-height: 100px;
+  border: 1px solid black;
+  animation: fadeOut 3s;
+}
+@keyframes fadeOut {
+  from {
+      opacity: 1;
+  }
+  to {
+      opacity: 0;
+  }
 }
 .cart-left td#foto-barang img {
   height: 10rem;
@@ -677,6 +701,7 @@ footer #foot h3 {
 }
 .checkout-page ul {
   list-style-type: none;
+  padding-left: 0;
 }
 .checkout-page .info-pembelian {
   margin-top: 2rem;
@@ -701,5 +726,22 @@ footer #foot h3 {
   width: 80%;
   line-height: 3rem;
   padding: 0 3rem;
+}
+
+/* RIncian Pembayaran */
+.rincian-pembayaran{
+  margin-top: 2rem;
+}
+.rincian-pembayaran .rincian{
+  display: flex;
+  justify-content: space-between;
+  width: 50vw;
+}
+.rincian-pembayaran .rincian p#text{
+  line-height: 30px;
+}
+.rincian-pembayaran .rincian input{
+  border: none;
+  cursor: default;
 }
 /* Responsif */
