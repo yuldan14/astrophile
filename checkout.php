@@ -155,9 +155,9 @@
                     <h3>METODE PEMBAYARAN</h3>
                 </div>
                 <div class="payment-method">
-                    <p><input type="radio" name="payment" id="payment" value="creditcard"> Kartu Kredit</p>
+                    <p><input type="radio" name="payment" id="payment" value="BRI"> Bank BRI</p>
                     <p><input type="radio" name="payment" id="payment" value="dana"> DANA</p>
-                    <p><input type="radio" name="payment" id="payment" value="shoppe"> Shoppe</p>
+                    <!-- <p><input type="radio" name="payment" id="payment" value="shoppe"> Shoppe</p> -->
                 </div>
                 <div class="checkout">
                     <button class="btn btn-primary" type="submit">Checkout</button>

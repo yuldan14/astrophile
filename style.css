@@ -463,6 +463,10 @@ nav .menu ul li a:hover {
   font-family: sans-serif;
   margin-left: 3rem;
 }
+.container-login form .registrasi a{
+  color: var(--span);
+  text-decoration: none;
+}
 
 .tanggal-lahir table select {
   border-radius: 10px;

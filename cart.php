@@ -83,9 +83,9 @@
                     <tr>
                         <th width="90px"><input type="checkbox" name="cart-all" id="cart-all" onclick="checkAll(this)" onclick="updateTotal()">Pilih Semua</th>
                         <th colspan="2">Nama Produk</th>
-                        <th>Ukuran</th>
+                        <th>Variasi</th>
                         <th width="200px">Jumlah</th>
-                        <th>Total Harga</th>
+                        <th>Harga</th>
                     </tr>
                     <tr>
                         <td><input type="checkbox" name="cart" class="cart-checkbox" onclick="checkIfAllChecked()" onclick="updateTotal()"></td>
