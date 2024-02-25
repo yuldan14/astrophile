@@ -559,7 +559,7 @@ form .password i#togglePassword {
   text-align: center;
   line-height: 100px;
   border: 1px solid black;
-  animation: fadeOut 3s;
+  animation: fadeOut 5s;
 }
 @keyframes fadeOut {
   from {
@@ -613,7 +613,7 @@ form .password i#togglePassword {
 
 .cart-right .payment {
   height: 100vh;
-  padding: 3rem 1rem;
+  padding: 2rem 1rem;
   background-color: #efefef;
 }
 
@@ -629,6 +629,18 @@ form .password i#togglePassword {
   border: none;
   width: 20vw;
 }
+.payment .payment-method .bri p input, .dana p input{
+  border-radius: 7px;
+  border: 1px solid black;
+  display: none;
+  height: 3rem;
+  width: 20vw;
+  padding-left: 1rem;
+}
+.payment .payment-method{
+  height: 20vh;
+}
+
 .cart-left .left-foot {
   display: flex;
   align-items: center;
@@ -636,10 +648,6 @@ form .password i#togglePassword {
 .cart-left .left-foot a {
   text-decoration: none;
   color: var(--span);
-}
-.cart-left .left-foot:hover p#kembali {
-  animation: animasi_kembali 10s ease;
-  position: relative;
 }
 
 @keyframes animasi_kembali {
@@ -659,7 +667,6 @@ form .password i#togglePassword {
 
 .right-foot .checkout {
   display: flex;
-  gap: 2rem;
   align-items: center;
 }
 
@@ -692,7 +699,8 @@ footer #foot h3 {
 }
 
 /* Informasi Pembayaran */
-.checkout-page {
+.cart-container .checkout-page {
+  padding-top: 2rem;
   width: 60vw;
 }
 .checkout-page .alamat {

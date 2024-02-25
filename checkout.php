@@ -121,7 +121,7 @@
                     <p id="text">Masukkan Kode Voucher: <input type="text" name="voucher" id="voucher"></p>
                 </div>
                 <div class="pesan">
-                    <p id="text">Pesan: <input type="text" name="pesan" id="voucher"></p>
+                    <p id="text">Pesan: <input type="text" name="pesan" id="pesan"></p>
 
                 </div>
             </div>
@@ -155,8 +155,15 @@
                     <h3>METODE PEMBAYARAN</h3>
                 </div>
                 <div class="payment-method">
-                    <p><input type="radio" name="payment" id="payment" value="BRI"> Bank BRI</p>
-                    <p><input type="radio" name="payment" id="payment" value="dana"> DANA</p>
+                    <div class="bri">
+                        <input type="radio" name="payment" id="radio-bri" value="BRI" onclick="toggleInput('radio-bri')"> Bank BRI
+                        <p><input type="text" name="norekbri" id="norekbri" placeholder="Masukkan No Rekening"></p>
+                    </div>
+                    <div class="dana">
+                        <input type="radio" name="payment" id="radio-dana" value="dana" onclick="toggleInput('radio-dana')"> DANA
+                        <p><input type="text" name="dana" id="dana" placeholder="Masukkan No DANA"></p>
+                    </div>
+
                     <!-- <p><input type="radio" name="payment" id="payment" value="shoppe"> Shoppe</p> -->
                 </div>
                 <div class="checkout">
@@ -170,7 +177,26 @@
 
 
     <script>
+        function toggleInput(radioButtonId) {
+            var radioButton = document.getElementById(radioButtonId);
+            var inputFieldId = radioButtonId === 'radio-bri' ? 'norekbri' : 'dana'; // Menentukan id input field yang akan ditampilkan
+            var otherInputFieldId = radioButtonId === 'radio-bri' ? 'dana' : 'norekbri'; // Menentukan id input field yang akan disembunyikan
 
+            var inputField = document.getElementById(inputFieldId);
+            var otherInputField = document.getElementById(otherInputFieldId);
+            
+            if (radioButton.checked) {
+                inputField.style.display = 'block'; // Tampilkan input field yang terkait
+                otherInputField.style.display = 'none'; // Sembunyikan input field yang tidak terkait
+                // inputField.classList.add('show'); // Tambahkan kelas show untuk memunculkan input field
+                // otherInputField.classList.remove('show'); // Hapus kelas show untuk menyembunyikan input field yang tidak terkait
+            }
+        }
+
+        // Panggil fungsi toggleInput() untuk mengatur tampilan input field saat halaman dimuat
+        document.addEventListener('DOMContentLoaded', function() {
+            toggleInput('radio-bri'); // Atur tampilan input field sesuai radio button yang dipilih pada saat halaman dimuat
+        });
     </script>
 
     <!-- bootstrap -->
