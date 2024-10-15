@@ -1,35 +1,31 @@
-const togglePassword = document.querySelector('#togglePassword');
-const password = document.querySelector('#password');
+document.addEventListener('DOMContentLoaded', () => {
+    const burger = document.getElementById('burger');
+    const navLinks = document.getElementById('nav-links');
+    const navMenu = document.getElementById('nav-menu'); // Pastikan ini merujuk ke elemen yang benar
 
-togglePassword.addEventListener("click", function(){
-    const type = password.getAttribute("type") === "password" ? "text" : "password";
-    password.setAttribute("type", type);
-    //toggle icon
-    this.classList.toggle("bi-eye");
-});
+    // Fungsi untuk toggle menu
+    const toggleMenu = () => {
+        navLinks.classList.toggle('active');
+        burger.classList.toggle('toggle');
+        document.body.classList.toggle('menu-open'); // Mencegah scrolling saat menu terbuka
+    };
 
-// Menu Burger
+    // Event listener untuk klik pada burger
+    burger.addEventListener('click', (e) => {
+        e.stopPropagation(); // Mencegah event click bubble ke document
+        toggleMenu();
+    });
 
-const burger = document.getElementById('burger');
-const navLinks = document.getElementById('nav-links');
+    // Menutup menu jika mengklik di luar area menu
+    document.addEventListener('click', (event) => {
+        const isClickInsideMenu = navLinks.contains(event.target); // Cek apakah klik di dalam menu
+        const isClickOnBurger = burger.contains(event.target); // Cek apakah klik pada burger
 
-// Toggle menu function
-const toggleMenu = () => {
-    navLinks.classList.toggle('active');
-    burger.classList.toggle('toggle');
-};
-
-// Burger menu click event
-burger.addEventListener('click', () => {
-    toggleMenu();
-}); 
-// Close menu when clicking outside
-document.addEventListener('click', (event) => {
-    const target = event.target;
-    const isNavMenu = target.closest('.nav-menu');
-
-    if (!isNavMenu) {
-        navLinks.classList.remove('active');
-        burger.classList.remove('toggle');
-    }
+        if (!isClickInsideMenu && !isClickOnBurger) {
+            // Jika klik di luar menu dan burger, tutup menu
+            navLinks.classList.remove('active');
+            burger.classList.remove('toggle');
+            document.body.classList.remove('menu-open'); // Re-enable scrolling
+        }
+    });
 });
