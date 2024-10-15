@@ -1055,4 +1055,8 @@ section#produk-page {
   .right-foot .checkout button.btn.btn-primary{
     left: 18rem;
   }
+  .checkout .jumlah-checkout {
+    position: absolute;
+    right: -4rem;
+  }
 }
