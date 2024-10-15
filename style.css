@@ -479,26 +479,28 @@ form .password i#togglePassword {
   color: #222;
   text-decoration: none;
 }
-.cart-left .cart-table {
-  width: 90vw;
-  margin-bottom: 5rem;
-  display: flex;
-  justify-content: center;
-}
-.cart-left .cart-table table tr {
-  text-align: center;
-}
-.cart-left .cart-table table {
-  width: 90vw;
-}
-.cart-left tr td {
-  height: 10rem;
-}
-.cart-left .cart-table table td input#total-harga {
-  border: none;
-  text-align: center;
-  background: transparent;
-  cursor: default;
+@media (min-width: 1000px) {
+  .cart-left .cart-table {
+    width: 90vw;
+    margin-bottom: 5rem;
+    display: flex;
+    justify-content: center;
+  }
+  .cart-left .cart-table table tr {
+    text-align: center;
+  }
+  .cart-left .cart-table table {
+    width: 90vw;
+  }
+  .cart-left tr td {
+    height: 10rem;
+  }
+  .cart-left .cart-table table td input#total-harga {
+    border: none;
+    text-align: center;
+    background: transparent;
+    cursor: default;
+  }
 }
 .checkout .jumlah-checkout {
   cursor: default;
@@ -885,7 +887,7 @@ section#produk-page {
     height: 32vh;
   }
   /* Menu styling */
-.menu ul {
+  .menu ul {
     font-size: 12px;
     z-index: 99;
     padding: 0;
@@ -901,43 +903,42 @@ section#produk-page {
     color: white;
     overflow-x: hidden;
     padding-top: 5rem;
-}
-nav .menu ul{
-  width: 50%;
-  justify-content: flex-start;
-  gap: 5rem;
-}
+  }
+  nav .menu ul {
+    width: 50%;
+    justify-content: flex-start;
+    gap: 5rem;
+  }
 
-.menu ul#nav-links.active {
+  .menu ul#nav-links.active {
     right: 0; /* Slide in the menu */
     top: 0;
     transition: 0.3s;
     padding-top: 6rem;
-}
+  }
 
-/* Burger toggle animation */
-.burger.toggle .line1 {
+  /* Burger toggle animation */
+  .burger.toggle .line1 {
     transform: rotate(-45deg) translate(-5px, 6px);
-}
+  }
 
-.burger.toggle .line2 {
+  .burger.toggle .line2 {
     opacity: 0;
-}
+  }
 
-.burger.toggle .line3 {
+  .burger.toggle .line3 {
     transform: rotate(45deg) translate(-5px, -6px);
-}
+  }
 
-/* Adjust the height of the body when the menu is open */
-body.menu-open {
+  /* Adjust the height of the body when the menu is open */
+  body.menu-open {
     overflow: hidden; /* Prevent scrolling when menu is active */
-}
+  }
 
-  
   nav .navbar .menu ul li a {
     color: white;
   }
-  
+
   .extra-menu {
     top: 13px;
     right: 90px;
@@ -952,7 +953,7 @@ body.menu-open {
   button:not(:disabled) {
     position: absolute;
     left: 10rem;
-    border:none;
+    border: none;
   }
 
   .container-login form input {
@@ -988,7 +989,7 @@ body.menu-open {
     justify-content: center;
     font-size: 3vw;
   }
-  .produk .button{
+  .produk .button {
     position: absolute;
   }
   .produk .text h3 {
@@ -1013,5 +1014,45 @@ body.menu-open {
   }
   .checkout-page .alamat a {
     font-size: 12px;
+  }
+
+  /* Chart */
+  .cart-left td#foto-barang img {
+    height: 2.5rem;
+  }
+  span#pilih{
+    display: none;
+  }
+  select#size{
+    width: 80px;
+  }
+  td.namaProduk{
+    font-size: 12px;
+  }
+  .cart-container{
+    padding-left: 0;
+  }
+  .cart-left .cart-head h1{
+    padding-left: 3rem;
+  }
+  input#total-harga{
+    width: 80px;
+    border: none;
+  }
+  button#plus{
+    left: 18rem;
+    background:none;
+    color: var(--main);
+  }
+  button#minus{
+    left: 15rem;
+    background: none;
+    color: var(--main);
+  }
+  th.jumlah{
+    width: 10rem;
+  }
+  .right-foot .checkout button.btn.btn-primary{
+    left: 18rem;
   }
 }

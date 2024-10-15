@@ -88,12 +88,12 @@
             <div class="cart-table">
                 <table class="table table-striped">
                     <tr>
-                        <th width="90px"><input type="checkbox" name="cart-all" id="cart-all" onclick="checkAll(this)"
-                                onclick="updateTotal()">Pilih Semua</th>
-                        <th colspan="2">Nama Produk</th>
-                        <th>Variasi</th>
-                        <th width="200px">Jumlah</th>
-                        <th>Harga</th>
+                        <th width="90px" class="pilih"><input type="checkbox" name="cart-all" id="cart-all" onclick="checkAll(this)"
+                                onclick="updateTotal()"><span id="pilih" style="color: black;">Pilih Semua</span></th>
+                        <th colspan="2" class="namaProduk">Nama Produk</th>
+                        <th class="variasi">Variasi</th>
+                        <th width="200px" class="jumlah">Jumlah</th>
+                        <th class="harga">Harga</th>
                     </tr>
                     <tr>
                         <td><input type="checkbox" name="cart" class="cart-checkbox" onclick="checkIfAllChecked()"
@@ -101,7 +101,7 @@
                         <td id="foto-barang">
                             <img src="img/Group 6.png" alt="">
                         </td>
-                        <td>Kaos Astrophile</td>
+                        <td class="namaProduk">Kaos Astrophile</td>
                         <td>
                             <select name="size" id="size">
                                 <option value="S">Ukuran - S</option>
@@ -123,7 +123,7 @@
                         <td id="foto-barang">
                             <img src="img/Group 6.png" alt="">
                         </td>
-                        <td>Kaos Astrophile</td>
+                        <td class="namaProduk">Kaos Astrophile</td>
                         <td>
                             <select name="size" id="size">
                                 <option value="S">Ukuran - S</option>
@@ -145,7 +145,7 @@
                         <td id="foto-barang">
                             <img src="img/Group 6.png" alt="">
                         </td>
-                        <td>Kaos Astrophile</td>
+                        <td class="namaProduk">Kaos Astrophile</td>
                         <td>
                             <select name="size" id="size">
                                 <option value="S">Ukuran - S</option>
