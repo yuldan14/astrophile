@@ -1082,8 +1082,17 @@ section#produk-page {
   select#size option{
     width: 20px;
   }
+  .card-container .lihat-detail{
+    display: flex;
+    justify-content: space-around;
+  }
   .card-container .lihat-detail a{
     font-size: 12px;
+    width: 40%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .nama-produk h5 {
     font-size: 1rem;
