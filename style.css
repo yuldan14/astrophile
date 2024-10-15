@@ -31,7 +31,7 @@ nav {
   font-family: NunitoSans;
   top: 0;
 }
-input:focus{
+input:focus {
   outline: none;
 }
 .logo {
@@ -116,16 +116,17 @@ nav .menu ul li a:hover {
   height: 90vh;
   width: 90vw;
   display: flex;
+  justify-content: space-between;
   border-radius: 23px;
   align-items: center;
   background-attachment: fixed;
-  background: linear-gradient(90deg, #dcdcdc 2%, #eee 100%);
+  background: linear-gradient(90deg, #dcdcdc 10%, #eee 100%);
   overflow: hidden;
+  padding: 0 5rem;
 }
 .hero .text {
   border-radius: 23px;
-  padding-left: 7rem;
-  width: 600px;
+  width: 40vw;
   position: relative;
   height: 90vh;
   display: flex;
@@ -134,7 +135,6 @@ nav .menu ul li a:hover {
   text-align: left;
   line-height: 50px;
   z-index: 2;
-  background-color: var(--back);
 }
 .hero .text h2 {
   font-size: 50px;
@@ -160,33 +160,18 @@ nav .menu ul li a:hover {
 .hero .button a:hover {
   background-color: var(--main);
 }
-.slider-container {
-  width: 100%;
-  margin: auto;
-  overflow: hidden;
+.hero .foto {
+  width: 35vw;
+  margin-top: 10rem;
 }
-.slider {
-  display: flex;
-  width: 40vw;
-  align-items: center;
-  transition: transform 0.5s ease-in-out;
-}
-
-.slider img {
-  filter: drop-shadow(7px 7px 7px #666666);
-  width: 40vw;
-  position: relative;
-  top: 2rem;
-}
-
-.foto img {
-  filter: drop-shadow(7px 7px 7px #666666);
+.hero .foto img {
+  filter: drop-shadow(rgb(5, 5, 5) 7px 7px #666666);
   transition: 1s;
   width: 100%;
 }
 
 .hero .foto img:hover {
-  transform: scale(1.1);
+  transform: scale(1.04);
   transition: 1s;
 }
 /*Kategori*/
@@ -219,34 +204,31 @@ nav .menu ul li a:hover {
   width: 50%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   z-index: 2;
 }
-.produk h3 {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  font-size: 30px;
-  text-align: center;
+.produk .text h3 {
+  width: 100%;
+  padding-left: 2rem;
+  font-size: 3vw;
 }
 .produk .foto {
   width: 50%;
-  position: relative;
-  top: -90px;
-  left: -80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: 1;
 }
 .produk .foto img {
-  width: 150%;
+  width: 90%;
 }
-#sandal .foto {
+/* #sandal .foto {
   left: -100px;
   top: 30px;
 }
 #sandal .foto img {
   width: 150%;
-}
+} */
 #kaos {
   background-color: #fec62e;
 }
@@ -259,25 +241,6 @@ nav .menu ul li a:hover {
 #ganci {
   background-color: black;
 }
-#ganci .foto {
-  top: -60px;
-}
-#ganci .foto img {
-  width: 130%;
-}
-#kalung .foto img {
-  width: 130%;
-}
-#kalung .foto {
-  top: 0px;
-}
-#gelang .foto img {
-  width: 130%;
-}
-#gelang .foto {
-  top: 0px;
-  left: 0px;
-}
 #kalung {
   background-color: #2dd06f;
 }
@@ -285,9 +248,15 @@ nav .menu ul li a:hover {
   background-color: #1687ff;
 }
 .produk .button {
+  margin-top: 1rem;
   transition: 1s;
+  padding-left: 2rem;
   transform: translateX(0) scale(1);
   transition: transform 0.45s cubic-bezier(0.75, 0.1, 0.25, 0.9);
+}
+.produk .button a {
+  position: absolute;
+  font-size: 1vw;
 }
 .produk .button:hover {
   transform: translate(20px) scale(1);
@@ -333,7 +302,7 @@ nav .menu ul li a:hover {
 
 #latest .produk-container .product .beli a {
   text-decoration: none;
-  color: black;
+  color: white;
   background-color: var(--main);
   padding: 1rem 2rem;
   position: relative;
@@ -380,7 +349,7 @@ nav .menu ul li a:hover {
 .container-login form {
   position: relative;
   border-radius: 30px;
-  height: 80vh;
+  height: 88vh;
   width: 32vw;
   background: rgba(238, 231, 231, 0.13);
   -webkit-backdrop-filter: blur(50px);
@@ -392,7 +361,7 @@ nav .menu ul li a:hover {
   margin-top: 1.5rem;
 }
 .container-login form h1.astro {
-  margin-bottom: 5rem;
+  margin-bottom: 1rem;
 }
 
 .container-login form .form #form {
@@ -411,7 +380,7 @@ nav .menu ul li a:hover {
   align-items: center;
 }
 .container-login form input {
-  width: 21vw;
+  width: 25vw;
   border-radius: 10px;
   height: 2.4rem;
   border: none;
@@ -434,6 +403,7 @@ nav .menu ul li a:hover {
   background-color: var(--span);
   cursor: pointer;
   margin-bottom: 1rem;
+  margin-top: 1.5rem;
 }
 
 .container-login form .other {
@@ -462,8 +432,9 @@ nav .menu ul li a:hover {
 .container-login form .registrasi {
   font-family: sans-serif;
   margin-left: 3rem;
+  margin-top: 1.2rem;
 }
-.container-login form .registrasi a{
+.container-login form .registrasi a {
   color: var(--span);
   text-decoration: none;
 }
@@ -478,8 +449,8 @@ nav .menu ul li a:hover {
 form .password i#togglePassword {
   position: relative;
   cursor: pointer;
-  left: -40px;
-  top: -3px;
+  left: 319px;
+  top: -32px;
 }
 
 /* Cart */
@@ -529,12 +500,12 @@ form .password i#togglePassword {
   background: transparent;
   cursor: default;
 }
-.checkout .jumlah-checkout{
+.checkout .jumlah-checkout {
   cursor: default;
 }
 .checkout .jumlah-checkout input#total {
   position: relative;
-  cursor:default;
+  cursor: default;
   border: none;
 }
 .checkout .jumlah-checkout input#total-item {
@@ -544,7 +515,7 @@ form .password i#togglePassword {
   text-align: center;
   border: none;
 }
-.right-foot .checkout .popup{
+.right-foot .checkout .popup {
   position: absolute;
   top: -450%;
   left: 25%;
@@ -563,10 +534,10 @@ form .password i#togglePassword {
 }
 @keyframes fadeOut {
   from {
-      opacity: 1;
+    opacity: 1;
   }
   to {
-      opacity: 0;
+    opacity: 0;
   }
 }
 .cart-left td#foto-barang img {
@@ -587,13 +558,16 @@ form .password i#togglePassword {
   display: flex;
 }
 .cart-container .cart-left tr td button {
-  width: 40px;
+  width: 2.5rem;
   border: none;
-  background-color: #717575;
+  color: white;
+  background-color: var(--main);
+  border-radius: 5px;
 }
 .cart-container .cart-left tr td#jumlah input {
   width: 40px;
   border: none;
+  background: transparent;
   text-align: center;
 }
 
@@ -620,7 +594,7 @@ form .password i#togglePassword {
 .payment .checkout {
   display: flex;
   justify-content: center;
-  margin-top: 17rem;
+  margin-top: 10rem;
 }
 .payment .checkout button {
   border-radius: 5px;
@@ -629,7 +603,8 @@ form .password i#togglePassword {
   border: none;
   width: 20vw;
 }
-.payment .payment-method .bri p input, .dana p input{
+.payment .payment-method .bri p input,
+.dana p input {
   border-radius: 7px;
   border: 1px solid black;
   display: none;
@@ -637,7 +612,7 @@ form .password i#togglePassword {
   width: 20vw;
   padding-left: 1rem;
 }
-.payment .payment-method{
+.payment .payment-method {
   height: 20vh;
 }
 
@@ -688,14 +663,82 @@ footer #foot h3 {
   font-family: NunitoSans;
 }
 
-/* Produk page */
-.hero-product {
+/* Halaman Produk */
+section#produk-page {
+  display: flex;
+}
+#kategori-left {
+  width: 20vw;
+  height: 90vh;
+  padding-top: 5rem;
+  padding-left: 2rem;
+  position: sticky;
+  left: 0;
+  z-index: 888;
+  position: -webkit-sticky;
+  top: 4.1rem;
+}
+#kategori-left .list ul {
+  list-style-type: none;
+}
+.list ul li a {
+  color: black;
+  text-decoration: none;
+}
+.list ul li a:hover {
+  color: var(--span);
+}
+/* kategori right */
+.kategori-right {
   width: 100vw;
-  height: 20rem;
-  background-position-y: 100px;
-  background: url("https://img.freepik.com/free-psd/flat-design-fashion-template_23-2150070756.jpg?w=900&t=st=1707193233~exp=1707193833~hmac=732e9c501d439bc0213298a79015059baa70d0fcac6055e71c847cadfa25d47d");
-  background-size: cover;
-  background-repeat: none;
+}
+.right-head {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+.card-container {
+  display: flex;
+  gap: 50px;
+  margin-left: 4rem;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+}
+.card-produk {
+  width: 15vw;
+  height: 50vh;
+  background-color: white;
+}
+.card-image {
+  display: flex;
+  justify-content: center;
+}
+.card-image img {
+  width: 60%;
+}
+.card-container .lihat-detail {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+.card-container .lihat-detail a {
+  text-decoration: none;
+  color: white;
+  background-color: var(--span);
+  padding: 5px 15px;
+}
+
+/* Halaman Checkout */
+.checkout-container {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  font-family: NunitoSans;
+  padding-left: 3rem;
+}
+.checkout-page {
+  margin-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 /* Informasi Pembayaran */
@@ -747,33 +790,203 @@ footer #foot h3 {
   line-height: 3rem;
   padding: 0 3rem;
 }
+.burger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  position: absolute;
+  right: 3rem;
+  top: 1rem;
+}
 
+.burger div {
+  width: 30px;
+  height: 3px;
+  background-color: black;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
 /* RIncian Pembayaran */
-.rincian-pembayaran{
+.rincian-pembayaran {
   margin-top: 2rem;
 }
-.rincian-pembayaran .rincian{
+.rincian-pembayaran .rincian {
   display: flex;
   justify-content: space-between;
   width: 50vw;
+  margin-top: 2rem;
 }
-.rincian-pembayaran .rincian p#text{
+.rincian-pembayaran .rincian p#text {
   line-height: 30px;
 }
-.rincian-pembayaran .rincian input{
+.rincian-pembayaran .rincian input {
   border: none;
   cursor: default;
 }
-.voucher-pesan{
+.voucher-pesan {
   display: flex;
   justify-content: space-between;
   margin-top: 2rem;
 }
-.voucher-pesan input{
+.voucher-pesan input {
   border: none;
   border-bottom: 1px solid black;
 }
-.voucher-pesan input:focus{
+.voucher-pesan input:focus {
   outline: none;
 }
 /* Responsif */
+@media (max-width: 600px) {
+  nav {
+    width: 100%;
+  }
+  .burger {
+    display: flex;
+  }
+  .logo {
+    width: 35%;
+    margin-left: 2rem;
+  }
+  .hero {
+    height: 65vh;
+    padding: 0 1rem;
+  }
+  #hero {
+    height: 100%;
+  }
+  #kategori {
+    padding-top: 5rem;
+  }
+  #kategori .kategori-head {
+    margin-left: 1rem;
+    width: 86%;
+  }
+  .hero .foto img {
+    position: absolute;
+    width: 60%;
+    top: 15rem;
+    right: 0.3rem;
+    overflow-x: hidden;
+  }
+  .hero .text h2 {
+    font-size: 28px;
+  }
+  .hero .text h5 {
+    font-size: 17px;
+  }
+  .button a {
+    font-size: 12px;
+  }
+  .card-produk {
+    width: 30vw;
+    height: 32vh;
+  }
+  nav .navbar .menu ul {
+    font-size: 12px;
+    gap: 1px;
+    z-index: 99;
+    padding: 0;
+    display: block;
+    position: fixed;
+    width: 300px;
+    height: 100em;
+    top: 4rem;
+    color: white;
+    transition: 0.3s;
+    right: -999px;
+    overflow-x: hidden;
+    padding-top: 3rem;
+    background: rgba(34, 34, 34, 0.658);
+    padding-left: 3rem;
+  }
+  nav .navbar .menu ul li {
+    margin-bottom: 4rem;
+  }
+  nav .navbar .menu ul li a {
+    color: white;
+  }
+  .navbar .menu ul#nav-links.active {
+    right: -11px;
+    top: 0rem;
+    transition: .3s;
+    padding-top: 6rem;
+  } 
+  .extra-menu {
+    top: 13px;
+    right: 90px;
+    position: absolute;
+  }
+  .container-login form {
+    width: 91vw;
+  }
+  [type="button"]:not(:disabled),
+  [type="reset"]:not(:disabled),
+  [type="submit"]:not(:disabled),
+  button:not(:disabled) {
+    position: absolute;
+    top: 13.2rem;
+    left: 15rem;
+    outline: none;
+    border: none;
+  }
+
+  .container-login form input {
+    width: 70vw;
+  }
+  form .password i#togglePassword {
+    left: 268px;
+    top: -34px;
+  }
+  .container-login form button {
+    width: 28vw;
+  }
+  .container-login form {
+    height: 60vh;
+  }
+  .container-login form button {
+    margin-top: 1rem;
+  }
+  .container-login form .registrasi {
+    margin-top: 1.2rem;
+  }
+  .produk {
+    width: 45vw;
+  }
+  #kategori .kategori-head {
+    margin-bottom: 2rem;
+  }
+  .produk .button a {
+    width: 8rem;
+    top: 4rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-size: 2vw;
+  }
+  .produk .text h3 {
+    font-size: 6vw;
+  }
+  #latest .latest-head {
+    padding: 0 2rem;
+  }
+  #latest .produk-container {
+    padding: 0 1rem;
+  }
+  footer #foot h3 {
+    font-size: 14px;
+  }
+
+  footer p#text {
+    font-size: 12px;
+  }
+
+  .checkout-head h2 {
+    font-size: 18px;
+  }
+  .checkout-page .alamat a {
+    font-size: 12px;
+  }
+}
