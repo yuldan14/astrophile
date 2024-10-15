@@ -1020,11 +1020,17 @@ section#produk-page {
   .cart-left td#foto-barang img {
     height: 2.5rem;
   }
+  .cart-left th{
+    text-align: center;
+  }
+  .cart-left td{
+    text-align: center;
+  }
   span#pilih{
     display: none;
   }
   select#size{
-    width: 80px;
+    width: 60px;
   }
   td.namaProduk{
     font-size: 12px;
@@ -1033,19 +1039,22 @@ section#produk-page {
     padding-left: 0;
   }
   .cart-left .cart-head h1{
-    padding-left: 3rem;
+    padding-left: 0rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
   }
   input#total-harga{
-    width: 80px;
+    width: 58px;
     border: none;
   }
   button#plus{
-    left: 18rem;
+    left: 19.5rem;
     background:none;
     color: var(--main);
   }
   button#minus{
-    left: 15rem;
+    left: 15.8rem;
     background: none;
     color: var(--main);
   }
@@ -1053,10 +1062,21 @@ section#produk-page {
     width: 10rem;
   }
   .right-foot .checkout button.btn.btn-primary{
-    left: 18rem;
+    left: 19rem;
   }
   .checkout .jumlah-checkout {
     position: absolute;
     right: -4rem;
+  }
+  .right-foot .checkout .popup{
+    top: -1000%;
+    line-height: 1.5rem;
+    padding: 1rem 1.5rem;
+  }
+  .cart-container .cart-left tr td#jumlah input{
+    width: 100%;
+  }
+  select#size option{
+    width: 20px;
   }
 }
