@@ -159,6 +159,7 @@ nav .menu ul li a:hover {
 }
 .hero .button a:hover {
   background-color: var(--main);
+  color: white;
 }
 .hero .foto {
   width: 35vw;
@@ -263,6 +264,7 @@ nav .menu ul li a:hover {
 }
 .produk .button a:hover {
   background-color: var(--main);
+  color: white;
 }
 
 /* Produk terbaru */
