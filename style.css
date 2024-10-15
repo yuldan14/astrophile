@@ -723,13 +723,14 @@ section#produk-page {
 .card-container .lihat-detail {
   margin-top: 1rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
 }
 .card-container .lihat-detail a {
   text-decoration: none;
   color: white;
   background-color: var(--span);
-  padding: 5px 15px;
+  padding: 5px 10px;
+  font-size: 12px;
 }
 
 /* Halaman Checkout */
@@ -1080,5 +1081,14 @@ section#produk-page {
   }
   select#size option{
     width: 20px;
+  }
+  .card-container .lihat-detail a{
+    font-size: 7px;
+  }
+  .nama-produk h5 {
+    font-size: 1rem;
+  }
+  .harga-produk b{
+    font-size: 18px;
   }
 }
