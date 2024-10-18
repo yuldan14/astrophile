@@ -573,6 +573,7 @@ form .password i#togglePassword {
   border: none;
   background: transparent;
   text-align: center;
+  padding-left: 0.8rem;
 }
 
 .cart-left .cart-head {
@@ -731,6 +732,7 @@ section#produk-page {
   background-color: var(--span);
   padding: 5px 10px;
   font-size: 12px;
+  border-radius: 5px;
 }
 
 /* Halaman Checkout */
