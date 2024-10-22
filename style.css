@@ -175,97 +175,6 @@ nav .menu ul li a:hover {
   transform: scale(1.04);
   transition: 1s;
 }
-/*Kategori*/
-#kategori {
-  padding-top: 7rem;
-  width: 100vw;
-  font-family: NunitoSans;
-}
-
-#kategori .kategori-head {
-  width: 100vw;
-  margin-bottom: 5rem;
-  margin-left: 5rem;
-}
-#kategori .container {
-  width: 100vw;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-.produk {
-  width: 26vw;
-  height: 35vh;
-  margin-top: 20px;
-  border-radius: 23px;
-  color: white;
-  display: flex;
-}
-.produk .text {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  z-index: 2;
-}
-.produk .text h3 {
-  width: 100%;
-  padding-left: 2rem;
-  font-size: 3vw;
-}
-.produk .foto {
-  width: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1;
-}
-.produk .foto img {
-  width: 90%;
-}
-/* #sandal .foto {
-  left: -100px;
-  top: 30px;
-}
-#sandal .foto img {
-  width: 150%;
-} */
-#kaos {
-  background-color: #fec62e;
-}
-#kemeja {
-  background-color: #222;
-}
-#sandal {
-  background-color: #f42c37;
-}
-#ganci {
-  background-color: black;
-}
-#kalung {
-  background-color: #2dd06f;
-}
-#gelang {
-  background-color: #1687ff;
-}
-.produk .button {
-  margin-top: 1rem;
-  transition: 1s;
-  padding-left: 2rem;
-  transform: translateX(0) scale(1);
-  transition: transform 0.45s cubic-bezier(0.75, 0.1, 0.25, 0.9);
-}
-.produk .button a {
-  position: absolute;
-  font-size: 1vw;
-}
-.produk .button:hover {
-  transform: translate(20px) scale(1);
-}
-.produk .button a:hover {
-  background-color: var(--main);
-  color: white;
-}
 
 /* Produk terbaru */
 #latest {
@@ -289,26 +198,31 @@ nav .menu ul li a:hover {
 
 #latest .produk-container {
   width: 100vw;
-  padding: 0 5rem;
+  padding: 1rem 5rem;
   display: flex;
+  justify-content: flex-start;
+  gap: 2rem 0;
+  height: 100%;
+  flex-wrap: wrap;
 }
 
 #latest .produk-container .product {
   box-shadow: 0px 0px 2px 1px;
   margin: 0 1rem;
   border-radius: 5px;
-  width: 20vw;
-  height: 60vh;
+  width: 15rem;
+  height: 25rem;
   cursor: pointer;
+  flex-shrink: 0; /* Jangan biarkan item mengecil */
 }
 
 #latest .produk-container .product .beli a {
   text-decoration: none;
   color: white;
-  background-color: var(--main);
+  background-color: var(--span);
   padding: 1rem 2rem;
+  border-radius: 16px;
   position: relative;
-  border-radius: 2px;
 }
 #latest .produk-container .product .beli {
   position: relative;
@@ -332,10 +246,56 @@ nav .menu ul li a:hover {
   width: 50%;
 }
 #latest .produk-container .product .rating,
-.nama,
+#latest .nama,
 .harga {
   margin-left: 1rem;
 }
+
+
+
+/* Halaman Team */
+#team{
+  height: 100%;
+  margin-top: 10rem;
+}
+
+.team-head{
+  font-family: "NunitoSans";
+  display: flex;
+  justify-content: center;
+}
+
+.team-container{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 4rem;
+}
+
+.team-container .foto img{
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+.team-container .team .nama{
+  margin-top: 3rem;
+  text-align: center;
+  width: 100%;
+}
+.team .role{
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Halaman Login */
 .container-login {
@@ -952,6 +912,7 @@ section#produk-page {
   .container-login form {
     width: 91vw;
   }
+
   [type="button"]:not(:disabled),
   [type="reset"]:not(:disabled),
   [type="submit"]:not(:disabled),
@@ -986,6 +947,10 @@ section#produk-page {
   #kategori .kategori-head {
     margin-bottom: 2rem;
   }
+  #latest .latest-head p a {
+    position: relative;
+    right: -52px;
+  }
   .produk .button a {
     width: 8rem;
     top: 4rem;
@@ -1004,7 +969,12 @@ section#produk-page {
     padding: 0 2rem;
   }
   #latest .produk-container {
-    padding: 0 1rem;
+    padding: 1rem 1rem;
+    overflow-x: auto;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    flex-wrap: nowrap;
   }
   footer #foot h3 {
     font-size: 14px;
@@ -1025,70 +995,70 @@ section#produk-page {
   .cart-left td#foto-barang img {
     height: 2.5rem;
   }
-  .cart-left th{
+  .cart-left th {
     text-align: center;
   }
-  .cart-left td{
+  .cart-left td {
     text-align: center;
   }
-  span#pilih{
+  span#pilih {
     display: none;
   }
-  select#size{
+  select#size {
     width: 60px;
   }
-  td.namaProduk{
+  td.namaProduk {
     font-size: 12px;
   }
-  .cart-container{
+  .cart-container {
     padding-left: 0;
   }
-  .cart-left .cart-head h1{
+  .cart-left .cart-head h1 {
     padding-left: 0rem;
     display: flex;
     justify-content: center;
     margin-top: 2rem;
   }
-  input#total-harga{
+  input#total-harga {
     width: 58px;
     border: none;
   }
-  button#plus{
+  button#plus {
     left: 19.5rem;
-    background:none;
+    background: none;
     color: var(--main);
   }
-  button#minus{
+  button#minus {
     left: 15.8rem;
     background: none;
     color: var(--main);
   }
-  th.jumlah{
+  th.jumlah {
     width: 10rem;
   }
-  .right-foot .checkout button.btn.btn-primary{
+  .right-foot .checkout button.btn.btn-primary {
     left: 19rem;
   }
   .checkout .jumlah-checkout {
     position: absolute;
     right: -4rem;
   }
-  .right-foot .checkout .popup{
+  .right-foot .checkout .popup {
     top: -1000%;
     line-height: 1.5rem;
     padding: 1rem 1.5rem;
   }
-  .cart-container .cart-left tr td#jumlah input{
+  .cart-container .cart-left tr td#jumlah input {
     width: 100%;
   }
-  select#size option{
+  select#size option {
     width: 20px;
   }
-  .card-container .lihat-detail{
+  .card-container .lihat-detail {
     display: flex;
     justify-content: space-around;
   }
-  .card-container .lihat-detail a{
+  .card-container .lihat-detail a {
     font-size: 12px;
     width: 40%;
     text-align: center;
@@ -1099,7 +1069,7 @@ section#produk-page {
   .nama-produk h5 {
     font-size: 1rem;
   }
-  .harga-produk b{
+  .harga-produk b {
     font-size: 18px;
   }
 }
